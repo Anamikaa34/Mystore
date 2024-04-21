@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import "./Product.scss"
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart"
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder"
+import BalanceIcon from "@mui/icons-material/Balance"
+
 const Product = () =>{
 
     const [selectedImg, setSelectedImg]=useState(0);
@@ -20,9 +24,10 @@ const Product = () =>{
                     <img src={images[selectedImg]} alt="" />
                 </div>
             </div>
+            
             <div className="right">
                 <h1>Title</h1>
-                <span>$199</span>
+                <span className='price'>$19.9</span>
                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure commodi, alias voluptate amet minima sequi tempora quod asperiores porro dolores aut, facilis dolore dolorum officia. Esse a consequuntur aliquam natus!
                 </p>
@@ -31,8 +36,31 @@ const Product = () =>{
                      {quantity}
                     <button onClick={()=>setQuantity(prev=>prev+1)}>+</button>
                 </div>
+                <button className="add">
+                <AddShoppingCartIcon/>ADD TO CART
+                </button>
+
+                <div className='links'>
+                       <div className="item"><FavoriteBorderIcon />ADD TO WISHLIST</div>
+                       <div className="item"><BalanceIcon />ADD TO COMPARE</div>
+                </div>
+
+                <div className="info">
+                    <span>Vendor: Polo</span>
+                    <span>Product Type: T-shirt</span>
+                    <span>Tag: T-Shirt, Women, Top</span>
+                </div>
+                <hr />
+
+                <div className="details">
+                    <span>DESCRIPTION</span>
+                    <hr />
+                    <span>ADDITIONAL INFORMATION</span>
+                    <hr />
+                    <span>FAQ</span>
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 export default Product
