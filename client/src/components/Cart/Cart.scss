@@ -1,0 +1,80 @@
+.cart {
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    z-index: 999;
+    background-color: white;
+    padding: 10px; /* Decrease the padding */
+    max-width: 300px; /* Limit the maximum width */
+    -webkit-box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+
+    h1 {
+        margin-bottom: 20px; /* Decrease margin */
+        color: gray;
+        font-weight: 400;
+        font-size: 20px; /* Decrease font size */
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        gap: 15px; /* Decrease gap */
+        margin-bottom: 20px;
+
+        img {
+            width: 60px; /* Decrease image width */
+            height: 80px; /* Decrease image height */
+            object-fit: cover;
+        }
+
+        .details {
+            h1 {
+                font-size: 16px; /* Decrease font size */
+                font-weight: 500;
+            }
+            p {
+                color: gray;
+                margin-bottom: 5px; /* Decrease margin */
+                font-size: 12px; /* Decrease font size */
+            }
+            .price {
+                color: #2879fe;
+            }
+        }
+        .delete {
+            color: red;
+            font-size: 24px; /* Decrease font size */
+            cursor: pointer;
+        }
+    }
+    .total {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 16px; /* Decrease font size */
+        margin-bottom: 15px; /* Decrease margin */
+    }
+
+    button {
+        width: 200px; /* Decrease button width */
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Decrease gap */
+        cursor: pointer;
+        border: none;
+        background-color: #2879fe;
+        color: white;
+        font-weight: 500;
+        margin-bottom: 15px; /* Decrease margin */
+        font-size: 14px; /* Decrease font size */
+    }
+
+    .reset {
+        color: red;
+        font-size: 10px; /* Decrease font size */
+        cursor: pointer;
+    }
+}
